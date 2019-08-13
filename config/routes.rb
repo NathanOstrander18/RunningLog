@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :places
+  devise_for :users
   resources :runs
   resources :users
   root "pages#show", page: "home"

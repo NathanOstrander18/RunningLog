@@ -13,22 +13,12 @@
 
   <div class="field">
     <%= form.label :distance %>
-    <%= form.text_field :distance %>
-  </div>
-
-  <div class="field">
-    <%= form.label :unit %>
-    <%= form.text_field :unit %>
+    <%= form.text_field :distance %> <%= form.select :unit, ['miles', 'km']%>
   </div>
 
   <div class="field">
     <%= form.label :time %>
     <%= form.text_field :time %>
-  </div>
-
-  <div class="field">
-	<%= form.label :user_id, 'User' %>
-	<%= form.select :user_id, User.all.collect {|a| [ a.name, a.id ] }, { include_blank: true } %>
   </div>
 
   <div class="actions">

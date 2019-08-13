@@ -20,6 +20,11 @@
 	  <strong>User:</strong>
 	  <%= User.find(@run.user_id).name %>
 	</p>
+	
+	<p>
+		<strong>Location:</strong>
+		<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&center=#{@run.place.latitude},#{@run.place.longitude}&key=#{Rails.application.credentials.google_maps_api_key}", alt: "Map" %>
+	</p>
 
 	<%= link_to 'Edit', edit_run_path(@run) %> |
 	<%= link_to 'Back', runs_path %>
